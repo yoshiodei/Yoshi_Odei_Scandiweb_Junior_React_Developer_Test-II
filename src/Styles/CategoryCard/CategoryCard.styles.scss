@@ -1,0 +1,116 @@
+@import '../Variables';
+
+.card {
+    padding: 16px;
+    height: 444px;
+    min-width: 280px;
+    max-width: 386px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0px 4px 35px transparent;
+    cursor: pointer;
+    transition: all 0.5s;
+
+    &__image-div {
+        width: 100%;
+        height: 330px;
+        background-color: white;
+        position: relative;
+    }
+
+    &__image {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+
+    &__button-div {
+            width: 52px;
+            height: 52px;
+            border-radius: 50%;
+            position: absolute;
+            background-color: transparent;
+            right: 15px;
+            top: 50px;
+            justify-content: center;
+            align-items: center;
+            display: none;
+            transition: all 0.5s;
+    }
+
+    &__button-image {
+        height: 25px;
+        width: 25px;
+    }
+
+    &__item-name {
+        font-size: 1.125em;
+        font-weight: 300;
+        line-height: 29px;
+    }
+
+    &__item-price {
+        font-size: 1.125em;
+        font-weight: 500;
+        line-height: 29px;
+    }
+
+    &:hover {
+        box-shadow: 0px 4px 35px rgba(168, 172, 176, 0.49);
+    }
+
+    &__button-div:hover {
+        cursor: pointer;
+        background-color: darken($primaryColor, 50%);
+        transform: scale(1.05);
+    }
+
+    &__out-of-stock {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        display: flex;
+        justify-content: center;
+        padding-top: 170px;
+        z-index: 2;
+        background-color: rgba(255, 255, 255, 0.535);
+        cursor: not-allowed;
+
+        & *{
+            font-size: 1.5em;
+            font-weight: 400;
+            color: #8D8F9A;
+        }
+    }
+}
+
+.card-div{
+    height: 444px;
+    min-width: 280px;
+    max-width: 386px;
+    margin-top: 80px;
+    position: relative;
+
+    &__button-div {
+            width: 52px;
+            height: 52px;
+            border-radius: 50%;
+            position: absolute;
+            right: 15px;
+            top: 320px;
+            justify-content: center;
+            align-items: center;
+            display: none;
+            cursor:pointer;
+            transition: all 0.7s;
+            z-index: 5;
+    }
+
+    &:hover &__button-div {
+        display: flex;
+        background-color: $primaryColor;
+     }
+}

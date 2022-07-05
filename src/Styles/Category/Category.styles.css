@@ -1,0 +1,21 @@
+.category {
+  padding: 80px 101px;
+  height: calc(100vh - 80px);
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+.category__header {
+  color: #1D1F22;
+  font-size: 2.6em;
+  font-weight: 400;
+}
+
+.card-section {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  grid-column-gap: 40px;
+}
+/*# sourceMappingURL=Category.styles.css.map */

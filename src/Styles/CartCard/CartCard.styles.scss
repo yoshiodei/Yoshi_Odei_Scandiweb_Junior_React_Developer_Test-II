@@ -1,0 +1,214 @@
+@import '../Variables';
+
+.cart-card {
+    width: 100%;
+    border-top: 1px solid #E5E5E5;
+    padding: 24px 0;
+
+    &__details-div {
+        display: flex;
+        width: 100%;
+        min-height: 290px;
+        // background-color: rgba(211, 211, 211, 0.452);
+        justify-content: space-between;
+    }
+
+    &__header {
+        font-size: 1.125em;
+        font-weight: 700;
+        line-height: 18px;
+        margin-bottom: 7px;
+    }
+
+    &__product-title-div {
+        margin-bottom: 20px;
+    }
+
+    &__product-name {
+        font-size: 1.875em;
+        font-weight: 400;
+        line-height: 27px;
+        
+        &--boldened {
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+    }
+        &__attribute-div {
+            margin-bottom: 15px;
+        }
+    
+        &__attribute-inner-div {
+            height: 45px;
+            width: 264px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        &__attribute {
+            height: 100%;
+            flex: 1;
+            margin-right: 15px;
+            border: 1px solid $secondaryColor;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: default;
+            transition: all 0.4s;
+
+            &:last-child {
+                margin-right: 12px;
+            }
+
+            &--selected {
+                background-color: $secondaryColor;
+                color: white;
+            }
+        }
+
+        &__attribute-text {
+            text-align: center;
+            font-weight: 500;
+        }
+
+        &__color-inner-div {
+            height: 32px;
+            flex: 1;
+            display: flex;
+            justify-content: flex-start;
+        }
+
+        &__color {
+            height: 32px;
+            width: 32px;
+            margin-right: 12px;
+            border: 1px solid rgb(221, 221, 221);
+            background-color: #D3D2D5;
+            position: relative;
+            cursor: default;
+
+            &::after {
+                height: 34px;
+                width: 34px;
+                border: 1px solid $primaryColor;
+                content: '';
+                display: none;
+                position: absolute;
+                left: -3px;
+                top: -3px;
+            }
+
+            &--selected::after{
+                display: block;
+            }
+        }
+
+
+
+        &__price {
+            font-size: 1.5em;
+            font-weight: 700;
+            line-height: 24px;
+        }
+
+        &__price-div {
+            margin-bottom: 20px;
+        }
+
+        &__right-div{
+            height: 290px;
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        &__counter-div {
+            height: 100%;
+            width: 45px;
+            margin-right: 24px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        &__counter-button {
+            width: 45px;
+            height: 45px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 1px solid $secondaryColor;
+            transition: all 0.4s;
+            cursor: pointer;
+
+            &:hover {
+                background-color: $secondaryColor;
+                color: white;
+            }
+        }
+
+        &__counter-text {
+           text-align: center;
+        }
+
+        &__image-div {
+            height: 290px;
+            width: 200px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        &__carousel-track {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+            height: 100%;
+            position: relative;
+            transition: all 0.5s;
+        }
+
+        &__carousel-slide {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            width: 100%;
+        }
+
+        &__image {
+            height: 100%;
+            width: 100%;
+            object-fit: contain;
+        }
+
+        &__image-nav-div {
+            display: flex;
+            justify-content: space-between;
+            height: 24px;
+            width: 56px;
+            position: absolute;
+            right: 16px;
+            bottom: 16px;
+        }
+
+        &__image-nav {
+            height: 24px;
+            width: 24px;
+            background-color: #0e0e0ea5;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding-bottom: 7px;
+
+            & p {
+                font-weight: 600;
+                color: white;
+                font-size: 1.2em;
+                transform: scale(0.8, 1.3);
+            }
+
+            &:hover {
+                background-color: lighten(rgba(0, 0, 0, 0.626),8%)
+            }
+        }
+        
+}

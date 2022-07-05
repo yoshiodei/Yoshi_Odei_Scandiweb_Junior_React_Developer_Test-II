@@ -1,0 +1,202 @@
+@import '../Variables';
+
+.products {
+    padding: 40px 100px 80px;
+    height: calc(100vh - 80px);
+    overflow-y: scroll;
+    overflow-x: hidden;
+    display: grid;
+    grid-template-columns: 1fr 300px;
+    grid-column-gap: 80px;
+
+    &__product-tile {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        // background-color: rgb(102, 101, 101); 
+    }
+
+    &__alternative-product-div {
+        width: 80px;
+        min-height: 300px;
+        margin-right: 25px;
+    }
+
+    &__alternative-image-div {
+        width: 80px; 
+        height: 80px;
+        margin-bottom: 30px;
+
+        &--selected {
+            display: none;
+        }
+    }
+
+    &__main-product-div {
+        flex: 1;
+        min-height: 400px;
+        max-height: 450px;
+    }
+
+    &__main-product-image {
+        height: 100%;
+        width: 100%;
+        object-fit: contain;
+    }
+
+    &__alternative-image {
+        @extend .products__main-product-image;
+        border: 1px solid rgba(211, 211, 211, 0.476);
+        cursor: pointer;
+    }
+
+}
+
+.product-detail {
+        width: 100%;
+        min-height: 450px;
+        // background-color: rgb(116, 116, 116);
+
+        &__header {
+            font-size: 1.125em;
+            font-weight: 700;
+            line-height: 18px;
+            margin-bottom: 8px;
+        }
+
+        &__product-title-div {
+            margin-bottom: 40px;
+        }
+
+        &__product-name {
+            font-size: 1.875em;
+            font-weight: 400;
+            line-height: 27px;
+            
+            &--boldened {
+                font-weight: 600;
+                margin-bottom: 15px;
+            }
+        }
+
+        &__attribute-div {
+            margin-bottom: 25px;
+        }
+
+        &__attribute-inner-div {
+            height: 45px;
+            flex: 1;
+            display: flex;
+            justify-content: flex-start;
+        }
+
+        &__attribute {
+            height: 100%;
+            flex: 1;
+            margin-right: 10px;
+            border: 1px solid $secondaryColor;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            font-weight: 500;
+            font-size: 0.75em;
+            cursor: pointer;
+            transition: all 0.4s;
+
+            &--selected {
+                background-color: $secondaryColor;
+                color: white;
+            }
+
+            &:last-child {
+                margin-right: 0;
+            }
+
+            &:hover {
+                background-color: $secondaryColor;
+                color: white;
+            }
+        }
+
+        &__color-div {
+            margin-bottom: 35px;
+        }
+
+        &__color-inner-div {
+            height: 32px;
+            display: flex;
+            justify-content: flex-start;
+        }
+
+        &__color {
+            height: 32px;
+            width: 32px;
+            background-color: #D3D2D5;
+            margin-right: 10px;
+            position: relative;
+            border: 1px solid rgb(221, 221, 221);
+            cursor: pointer;
+            
+
+            &::after {
+                height: 34px;
+                width: 34px;
+                border: 1px solid $primaryColor;
+                content: '';
+                display: none;
+                position: absolute;
+                left: -3px;
+                top: -3px;
+            }
+
+            &--selected::after{
+                display: block;
+            }
+
+            &:hover.product-detail__color::after{
+                display: block;
+            }
+        }
+
+        &__price {
+            font-size: 1.5em;
+            font-weight: 700;
+            line-height: 18px;
+        }
+
+        &__price-div {
+            margin-bottom: 20px;
+        }
+
+        &__submit-button {
+            color: white;
+            background-color: $primaryColor;
+            height: 52px;
+            width: 100%;
+            line-height: 19px;
+            font-weight: 600;
+            margin-bottom: 40px;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.5s;
+
+            &:hover {
+                background-color: lighten($primaryColor, 5%);
+            }
+        }
+
+        &__dscription-div {
+            width: 95%;
+            min-height: 50px;
+            padding-bottom: 50px;
+        }
+
+        &__dscription {
+            font-size: 1em;
+            font-weight: 400;
+            line-height: 25px;
+        }
+
+        
+}

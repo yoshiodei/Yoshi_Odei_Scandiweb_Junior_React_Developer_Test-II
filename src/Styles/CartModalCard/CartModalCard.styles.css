@@ -1,0 +1,238 @@
+.modal-card {
+  color: #1D1F22;
+  width: 100%;
+  height: 190px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 40px;
+}
+
+.modal-card__details-div {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  height: 100%;
+}
+
+.modal-card__name-div {
+  margin-bottom: 4px;
+}
+
+.modal-card__name {
+  font-size: 0.9em;
+  font-weight: 300;
+}
+
+.modal-card__price-div {
+  margin-bottom: 5px;
+}
+
+.modal-card__price {
+  font-size: 1em;
+  font-weight: 500;
+}
+
+.modal-card__attribute-div {
+  margin-bottom: 4px;
+  width: 120px;
+}
+
+.modal-card__attribute-header {
+  font-size: 0.7em;
+  margin-bottom: 4px;
+}
+
+.modal-card__attribute-inner-div {
+  width: 100%;
+  height: 18px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.modal-card__attribute {
+  height: 100%;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  border: 1px solid #1D1F22;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-right: 5px;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.modal-card__attribute:last-child {
+  margin-right: 0;
+}
+
+.modal-card__attribute p {
+  cursor: default;
+  font-size: 0.7em;
+}
+
+.modal-card__attribute--selected {
+  color: white;
+  background-color: #1D1F22;
+}
+
+.modal-card__color-div {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.modal-card__color-header {
+  font-size: 0.875em;
+  margin-bottom: 8px;
+  line-height: 16px;
+}
+
+.modal-card__color-inner-div {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  height: 16px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.modal-card__color {
+  margin-right: 6px;
+  width: 16px;
+  height: 16px;
+  position: relative;
+  cursor: default;
+  border: 1px solid #dddddd;
+}
+
+.modal-card__color:last-child {
+  margin-right: 0;
+}
+
+.modal-card__color--selected::after {
+  width: 18px;
+  height: 18px;
+  position: absolute;
+  content: '';
+  border: 1px solid #5ECE7B;
+  z-index: 1;
+  top: -3px;
+  left: -3px;
+}
+
+.modal-card__item-div {
+  height: 100%;
+  width: 153px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.modal-card__counter-div {
+  height: 100%;
+  width: 24px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.modal-card__counter-button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  height: 24px;
+  border: 1px solid #1D1F22;
+  cursor: pointer;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+}
+
+.modal-card__counter-button-text {
+  font-size: 1.3em;
+  line-height: 20px;
+  text-align: center;
+}
+
+.modal-card__counter-button-text::-moz-selection {
+  background-color: transparent;
+}
+
+.modal-card__counter-button-text::selection {
+  background-color: transparent;
+}
+
+.modal-card__counter-button:hover {
+  background-color: #1D1F22;
+  color: white;
+}
+
+.modal-card__counter-value {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.modal-card__counter-text {
+  text-align: center;
+  font-weight: 500;
+}
+
+.modal-card__image-div {
+  height: 100%;
+  width: 121px;
+  overflow: hidden;
+  background-color: rgba(148, 147, 147, 0.169);
+}
+
+.modal-card__image {
+  height: 100%;
+  width: 190%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: -50px 0;
+     object-position: -50px 0;
+}
+/*# sourceMappingURL=CartModalCard.styles.css.map */

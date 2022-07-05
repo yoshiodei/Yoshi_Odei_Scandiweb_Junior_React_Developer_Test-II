@@ -1,0 +1,21 @@
+@import '../Variables';
+
+.category {
+    padding: 80px 101px ;
+    height: calc(100vh - 80px);
+    overflow-y: scroll;
+    overflow-x: hidden;
+
+    &__header {
+        color: $secondaryColor;
+        font-size: 2.6em;
+        font-weight: 400;    
+    }
+    
+}
+
+.card-section {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 40px;
+}
